@@ -76,7 +76,7 @@ class Variables
         'ISSUE_GIT_KEY'          => 'WILLNOWORK',
         // True if you want to connect to pushed (github.com/mcilloni/pushed) to serve push notifications to client apps like
         // NerdzMessenger (github.com/mcilloni/NerdzMessenger).
-        'PUSHED_ENABLED'         => true,
+        'PUSHED_ENABLED'         => false,
         // PHP client supports only local pushed instances on IP (no UNIX sockets right now)
         // This parameter indicates IP version to use to connect to pushed (default: 6)
         'PUSHED_IP6'             => true,
