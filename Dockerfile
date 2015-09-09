@@ -15,10 +15,6 @@ RUN sed -i -e 's#https://mirrors\.kernel\.org#http://mirror.clibre.uqam.ca#g' /e
        git nodejs npm --noconfirm
 RUN npm install uglify-js -g
 
-COPY conf/php-fpm.conf /etc/php/
-COPY conf/php.ini /etc/php/
-RUN echo "extension=apcu.so" >  /etc/php/conf.d/apcu.ini
-
 EXPOSE 9000
 
 VOLUME /srv/http
