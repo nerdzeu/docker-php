@@ -24,7 +24,6 @@ class Variables
         'MIN_LENGTH_NAME'        => 2,
         'MIN_LENGTH_SURNAME'     => 2,
         'CAPTCHA_LEVEL'          => 5,
-
         'SMTP_SERVER'            => 'smtp.gmail.com',
         'SMTP_PORT'              => '587',
         'SMTP_USER'              => 'WILLNOWORK',
@@ -34,12 +33,14 @@ class Variables
         'STATIC_DOMAIN'          => 'static.docker.nerdz.eu',
         'MOBILE_HOST'            => 'mobile.docker.nerdz.eu',
         'MINIFICATION_ENABLED'   => true,
-        'REDIS_ENABLED'          => false,
+        'REDIS_HOST'             => '',
+        'REDIS_PORT'             => '',
         'ISSUE_GIT_KEY'          => 'WILLNOWORK',
         'PUSHED_ENABLED'         => false,
         'PUSHED_IP6'             => true,
         'PUSHED_PORT'            => 5667,
         'CAMO_KEY'               => '',
+        'CAMO_HOST'              => 'camo.primary.nerdz.eu',
         'LOGIN_SSL_ONLY'         => false,
         'HTTPS_DOMAIN'           => 'docker.nerdz.eu'
     ];
