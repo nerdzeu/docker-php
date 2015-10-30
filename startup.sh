@@ -40,7 +40,7 @@ class Variables
         'PUSHED_IP6'             => true,
         'PUSHED_PORT'            => 5667,
         'CAMO_KEY'               => '',
-        'CAMO_HOST'              => 'camo.primary.nerdz.eu',
+        'MEDIA_HOST'             => 'media.docker.nerdz.eu',
         'LOGIN_SSL_ONLY'         => false,
         'HTTPS_DOMAIN'           => 'docker.nerdz.eu'
     ];
