@@ -2,7 +2,7 @@ FROM base/archlinux
 MAINTAINER Paolo Galeone <nessuno@nerdz.eu>
 
 RUN sed -i -e 's#https://mirrors\.kernel\.org#http://mirror.clibre.uqam.ca#g' /etc/pacman.d/mirrorlist && \
-       pacman -Sy haveged archlinux-keyring --noconfirm && haveged -w 1024 -v 1 && \
+       pacman -Sy haveged ca-certificates archlinux-keyring --noconfirm && haveged -w 1024 -v 1 && \
        pacman-key --init && pacman-key --populate archlinux && \
        pacman -S php \
        php-pgsql \
