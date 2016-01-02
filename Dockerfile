@@ -12,7 +12,7 @@ RUN sed -i -e 's#https://mirrors\.kernel\.org#http://mirror.clibre.uqam.ca#g' /e
        php-apcu-bc \
        wget \
        postgresql \
-       git nodejs npm --noconfirm
+       git nodejs npm gcc-libs --noconfirm
 RUN npm install uglify-js -g
 
 EXPOSE 9000
