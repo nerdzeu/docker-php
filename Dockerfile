@@ -6,7 +6,6 @@ RUN sed -i -e 's#https://mirrors\.kernel\.org#http://mirror.clibre.uqam.ca#g' /e
        pacman-key --init && pacman-key --populate archlinux && \
        pacman -S php \
        php-pgsql \
-       php-pear \
        php-gd \
        php-fpm \
        php-composer \
