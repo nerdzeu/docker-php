@@ -10,7 +10,7 @@ RUN sed -i -e 's#https://mirrors\.kernel\.org#http://mirror.clibre.uqam.ca#g' /e
        php-gd \
        php-fpm \
        php-composer \
-       php-apcu \
+       php-apcu-bc \
        wget \
        postgresql \
        git nodejs npm --noconfirm
