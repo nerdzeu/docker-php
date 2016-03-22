@@ -21,4 +21,6 @@ VOLUME /srv/http
 
 COPY startup.sh /opt/
 
+RUN pacman -S xz --noconfirm
+
 ENTRYPOINT bash /opt/startup.sh
