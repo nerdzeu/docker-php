@@ -42,7 +42,11 @@ class Variables
         'CAMO_KEY'               => '',
         'MEDIA_HOST'             => 'media.docker.nerdz.eu',
         'LOGIN_SSL_ONLY'         => false,
-        'HTTPS_DOMAIN'           => 'docker.nerdz.eu'
+        'HTTPS_DOMAIN'           => 'docker.nerdz.eu',
+EOF
+    PROXY=$(ip route | awk '{print $1}' |grep -v default)
+    cat << EOF >> /srv/http/nerdz.eu/class/config/index.php
+        'TRUSTED_PROXIES'        => ['$PROXY']
     ];
 }
 EOF
