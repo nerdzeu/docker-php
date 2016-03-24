@@ -23,4 +23,8 @@ COPY startup.sh /opt/
 
 RUN pacman -S xz --noconfirm
 
+RUN useradd -d /srv/http/ -s /bin/bash php && chown -R php:php /srv/http/
+RUN mkdir -p /etc/pki/tls/certs && cp /etc/ssl/certs/ca-certificates.crt /etc/pki/tls/certs/ca-bundle.crt
+
+USER php
 ENTRYPOINT bash /opt/startup.sh
