@@ -5,11 +5,9 @@ if [ ! -d /srv/http/nerdz.eu ]; then
     cd nerdz.eu
     composer install
     mkdir /srv/http/nerdz.eu/class/config/
-    cat << \EOF > /srv/http/nerdz.eu/class/config/index.php
+    cat << \EOF > /srv/http/nerdz.eu/class/config/Variables.class.php
 <?php
 namespace NERDZ\Core\Config;
-
-define('DEBUG', 1);
 
 class Variables
 {
@@ -57,7 +55,7 @@ class Variables
         'HTTPS_DOMAIN'           => '',
 EOF
     PROXY=$(ip route | awk '{print $1}' |grep -v default)
-    cat << EOF >> /srv/http/nerdz.eu/class/config/index.php
+    cat << EOF >> /srv/http/nerdz.eu/class/config/Variables.class.php
         'TRUSTED_PROXIES'        => ['$PROXY']
     ];
 }
