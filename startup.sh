@@ -66,4 +66,8 @@ EOF
     ./initdb.sh postgres test_db db_test postgres 5432
 fi
 
+if [[ -f /srv/http/DOCKER_GROUP ]]; then
+    sudo /opt/docker_owner.sh /srv/http/
+fi
+
 /usr/bin/php-fpm -F
