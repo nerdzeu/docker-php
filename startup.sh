@@ -1,4 +1,9 @@
 #!/usr/bin/env bash
+
+if [[ -f /srv/http/DOCKER_GROUP ]]; then
+    sudo /opt/docker_owner.sh /srv/http/
+fi
+
 if [ ! -d /srv/http/nerdz.eu ]; then
     cd /srv/http
     git clone --recursive https://github.com/nerdzeu/nerdz.eu.git
@@ -33,7 +38,7 @@ class Variables
         // address bar, outside the docker env)
         'SITE_NAME'              => 'NERD(Z)OCKER',
         'SITE_HOST'              => '',
-        'STATIC_DOMAIN'          => '',
+        'STATIC_HOST'          => '',
         'MOBILE_HOST'            => '',
         // Configure minification
         'MINIFICATION_ENABLED'   => true,
@@ -50,9 +55,7 @@ class Variables
         'CAMO_KEY'               => '',
         // Set the media host
         'MEDIA_HOST'             => '',
-        // Configure https
-        'LOGIN_SSL_ONLY'         => false,
-        'HTTPS_DOMAIN'           => '',
+        'API_URL'                => '',
 EOF
     PROXY=$(ip route | awk '{print $1}' |grep -v default)
     cat << EOF >> /srv/http/nerdz.eu/class/config/Variables.class.php
