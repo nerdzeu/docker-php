@@ -4,11 +4,7 @@ This repo is part of the docker enviroment for nerdz (`nerdzeu/docker`).
 
 It contains the php-fpm configuration and expose its port (9000).
 
-It exposes the container `/srv/http` folder as a volume.
-
-The `startup.sh` fetch the `nerdzeu/nerdz.eu` repo and its submodules.
-
-The `conf` directory contains the php and php-fpm configuration files. The `conf/config.php` files is a sample configuration file to move in `env/nerdz.eu/class/config/index.php` if you want a running 
+It exposes the container `/var/www/html` folder as a volume.
 
 # Usage
 
