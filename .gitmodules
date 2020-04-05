@@ -1,3 +1,3 @@
 [submodule "nerdz.eu"]
-	path = nerdz.eu
+	path = websites/nerdz.eu
 	url = git@github.com:nerdzeu/nerdz.eu
