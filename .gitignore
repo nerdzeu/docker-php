@@ -1,1 +1,2 @@
-env
+websites/*
+!websites/nerdz.eu
