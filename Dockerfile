@@ -1,4 +1,4 @@
-FROM php:7.4-fpm
+FROM php:8-fpm
 MAINTAINER Paolo Galeone <nessuno@nerdz.eu>
 
 RUN apt-get update && apt-get install -y \
